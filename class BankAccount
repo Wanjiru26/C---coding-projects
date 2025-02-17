@@ -1,0 +1,26 @@
+class BankAccount {
+private:
+    string accountHolder;
+    double balance;
+
+public:
+// Setter method for account holder
+    void setAccountHolder(string accHolder) {
+        accountHolder = accHolder;
+    }
+    
+    // Getter method for account holder
+    string getAccountHolder() {
+        return accountHolder;
+    }
+
+// Setter method for balance
+    void setBalance(double bal) {
+        balance = bal;
+    }
+    
+    // Getter methods for balance
+    double getBalance() {
+        return balance;
+    }
+};
