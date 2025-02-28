@@ -1,0 +1,83 @@
+//c++ program to demonstrate inheritance through a bank management system
+//author: Wanjiru Machehu
+//reg.no:BSCIT-05-0100/2024
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+// Class AccountHolder
+class AccountHolder {
+private:
+    string accountHolderName;
+
+public:
+    void setAccountHolderName(const string& name) {
+        accountHolderName = name;
+    }
+
+    string getAccountHolderName() const {
+        return accountHolderName;
+    }
+};
+
+// Class BankAccount (inherits from AccountHolder)
+class BankAccount : public AccountHolder {
+private:
+    int accountNumber;
+    double balance;
+
+public:
+    void setAccountNumber(int number) {
+        accountNumber = number;
+    }
+
+    int getAccountNumber() const {
+        return accountNumber;
+    }
+
+    void setBalance(double bal) {
+        balance = bal;
+    }
+
+    double getBalance() const {
+        return balance;
+    }
+};
+
+// Class SavingsAccount (inherits from BankAccount)
+class SavingsAccount : public BankAccount {
+private:
+    double interestRate;
+
+public:
+    void setInterestRate(double rate) {
+        interestRate = rate;
+    }
+
+    double getInterestRate() const {
+        return interestRate;
+    }
+};
+
+int main() {
+    // Creating an instance of SavingsAccount
+    SavingsAccount myAccount;
+
+    // Setting account holder name
+    myAccount.setAccountHolderName("John Doe");
+    // Setting account number
+    myAccount.setAccountNumber(12345);
+    // Setting balance
+    myAccount.setBalance(1000.50);
+    // Setting interest rate
+    myAccount.setInterestRate(3.5);
+
+    // Displaying account information
+    cout << "Account Holder: " << myAccount.getAccountHolderName() << endl;
+    cout << "Account Number: " << myAccount.getAccountNumber() << endl;
+    cout << "Balance: $" << myAccount.getBalance() << endl;
+    cout << "Interest Rate: " << myAccount.getInterestRate() << "%" << endl;
+
+    return 0;
+}
