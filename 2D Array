@@ -1,0 +1,23 @@
+//c++ program for a 2D Array
+//author: Wanjiru Machehu
+//reg.no:BSCIT-05-0100/2024
+
+#include <iostream>
+using namespace std;
+
+int main() {
+  // Declare a 2D array of integers with 2 rows and 3 columns
+  int marks[2][3]= {
+      {35,20,60},
+      {39,20,25}
+  };
+int i,j;
+for ( i = 0; i < 2; i++) {
+    for ( j = 0; j < 3; j++) {
+        cout<<marks[i][j]<<"\t";
+    }
+    cout <<endl;
+}
+
+  return 0;
+}
