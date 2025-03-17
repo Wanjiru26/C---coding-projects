@@ -1,0 +1,35 @@
+//c++ program for giving player information system for game development
+//author: Wanjiru Machehu
+//reg.no:BSCIT-05-0100/2024
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+struct Player {
+    string name;
+    int score;
+    int level;
+};
+
+void displayPlayer(const Player& p) {
+    cout << "Player Name: " << p.name << endl;
+    cout << "Score: " << p.score << endl;
+    cout << "Level: " << p.level << endl;
+}
+
+int main() {
+    // Create two players
+    Player player1 = {"Alice", 1200, 5};
+    Player player2 = {"Bob", 950, 4};
+
+    // Display player details
+    cout << "Player 1 Details:" << endl;
+    displayPlayer(player1);
+    cout << std::endl;
+
+    cout << "Player 2 Details:" << endl;
+    displayPlayer(player2);
+
+    return 0;
+}
